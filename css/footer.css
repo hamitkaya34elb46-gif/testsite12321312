@@ -1,0 +1,148 @@
+/* Footer Styles */
+.site-footer {
+    background-color: var(--secondary-dark);
+    /* #1a1a1a from genel.css */
+    color: var(--text-muted);
+    /* #b8b8b8 */
+    padding: 60px 0 20px;
+    margin-top: 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    /* Subtle gold border */
+    font-family: var(--font-primary);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+/* Footer Columns */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo a {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.footer-logo .logo-text {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 2px;
+}
+
+.footer-logo .logo-accent {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 300;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+}
+
+.footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #999;
+}
+
+/* ... existing code ... */
+
+/* Contact Info */
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    /* Changed from flex-start to center to prevent weird wrapping alignment if height differs */
+    margin-bottom: 15px;
+    font-size: 14px;
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+.contact-info li svg {
+    min-width: 20px;
+    margin-right: 15px;
+    color: var(--accent-gold);
+    flex-shrink: 0;
+    /* Prevent icon shrinking */
+}
+
+/* Copyright Bar */
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.copyright-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    transition: var(--transition-fast);
+    border: 1px solid transparent;
+}
+
+.social-link:hover {
+    background: transparent;
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    transform: translateY(-3px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
